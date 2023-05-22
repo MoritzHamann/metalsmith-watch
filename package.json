@@ -22,8 +22,7 @@
     "gaze": "^1.0.0",
     "metalsmith-filenames": "^1.0.0",
     "multimatch": "^2.0.0",
-    "tiny-lr": "^0.1.5",
-    "unyield": "0.0.1"
+    "tiny-lr": "^0.1.5"
   },
   "devDependencies": {
     "babel": "^5.1.13",

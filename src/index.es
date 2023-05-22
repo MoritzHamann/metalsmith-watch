@@ -8,7 +8,6 @@ import async from "async"
 import gaze from "gaze"
 import color from "chalk"
 import multimatch from "multimatch"
-import unyield from "unyield"
 import metalsmithFilenames from "metalsmith-filenames"
 
 import livereloadServer from "./livereload"
@@ -176,7 +175,7 @@ function buildFiles(metalsmith, paths, livereload, options, previousFilesMap) {
 }
 
 function buildPattern(metalsmith, patterns, livereload, options, previousFilesMap) {
-  unyield(metalsmith.read())((err, files) => {
+  metalsmith.read((err, files) => {
     if (err) {
       options.log(color.red(`${nok} ${err}`))
       return
